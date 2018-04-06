@@ -1,4 +1,4 @@
 untrusted comment: verify with jefecomp.pub
-RWTQZlRUmXlF0/N9jFHPqQEx0+4x8U6gxWDZWQ8qG63ULfHLFinfzmEi5cGrXRyc8OpR0L9797nuwmm0gEY8PTqQm9750d9ifAo=
-SHA256 (3 - Levantamento de Requisitos.pdf) = 1e2614de2796e7ce506516d76c1af0e16818fa6d3fbf3713471a21ebc0e79d22
-SHA256 (3 - Levantamento de Requisitos.tex) = 22f64acc0928bb468c3a9d74b07bc3d088a673c027e882e968b698e01b392dd7
+RWTQZlRUmXlF0xCalvxe3lYcoa0aZv0oFXFCi59pTrQUmxufDBUnTEzFOVXAvePJwT7BFyIRttgwTt1+wIMezUAVGsfbUwQ6HQo=
+SHA256 (3 - Levantamento de Requisitos.pdf) = 2b7da66458f47d772f50c24c8fee4e391f3feccf5fdc4e09e66aa2e94b18411d
+SHA256 (3 - Levantamento de Requisitos.tex) = c979fc4553517b568c227e8c54b7ed83757cce244fd6ca75e2a622db0dcc2c45

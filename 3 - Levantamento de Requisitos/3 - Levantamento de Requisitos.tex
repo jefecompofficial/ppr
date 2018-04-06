@@ -36,6 +36,7 @@
 
 \setbeamerfont{title like}{shape=\scshape,series=\bfseries}
 \setbeamerfont{frametitle}{shape=\scshape,series=\bfseries}
+\setbeamerfont{alerted text}{series=\bfseries}
 
 \setbeamercolor*{lower separation line head}{bg=Green3} 
 \setbeamercolor*{upper separation line foot}{bg=Green3} 
@@ -604,17 +605,235 @@ A presença dos requisitos diferenciais permitem um aumento do valor agregado da
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Casos de Uso}
+\subsection{Casos de Uso}
+
+\begin{frame}{Introdução aos Casos de Uso}
+
+\begin{alertblock}{O que são casos de uso?}
+Um caso de uso é uma representação de um cenário que descreve como o sistema a ser implementado será usado, em uma situação específica. Exemplo: Sacar dinheiro em um sistema bancário.
+\end{alertblock}
+
+\pause
+
+\begin{alertblock}{Qual a importância dos casos de uso?}
+Compreender em maior detalhes como o sistema será usado, para então identificar com maior clareza quais são os requisitos normais, esperados, e diferenciais. Além disso, casos de uso também podem apoiar a priorização de análise e implementação dos requisitos levantados.
+\end{alertblock}
+
+\end{frame}
+
+\begin{frame}{Unified Modelling Language - UML}
+
+\begin{alertblock}{O que é UML?}
+
+A Unified Modelling Language (UML) é uma linguagem de modelagem utilizada na concepção de sistemas de software. A UML possui muitos diagramas para auxiliar a análise e modelagem de sistemas de software, e para auxiliar o levantamento de requisitos será utilizado o \textit{\textbf{Diagrama de Casos de Uso}}.
+\end{alertblock}
+
+\end{frame}
+
+\begin{frame}{Diagrama de Casos de Uso}
+
+\centering \includegraphics[keepaspectratio,width=.1\textwidth]{Ator}
+
+\begin{alertblock}{Ator}
+Atores são entidades que interagem com o sistema. Essas entidades podem ser pessoas (usuários) ou outros sistemas. Cada ator representa um único papel na utilização do sistema. Exemplos de atores: Cliente, Administrator, Gestor, Balconista, Sistema de Pagamento, etc.
+\end{alertblock}
+
+\end{frame}
+
+\begin{frame}{Diagrama de Casos de Uso}
+
+\centering \includegraphics[keepaspectratio,width=.5\textwidth]{Caso_de_Uso}
+
+\begin{alertblock}{Caso de Uso}
+Casos de Uso representam o que um dado sistema pode fazer. Entretanto, um caso de uso não representa apenas a funcionalidade, mas sim o comportamento do sistema quando um dado ator o está utilizando.
+\end{alertblock}
+
+\end{frame}
+
+\begin{frame}{Diagrama de Casos de Uso}
+
+\begin{alertblock}{Diagrama de Casos de Uso}
+Um diagrama de casos de uso descreve o comportamento do sistema em situações específicas. Logo, o diagrama representa a associação entre atores e casos de uso, assim como (caso existam) são representadas relações entre diferentes casos de uso.
+\end{alertblock}
+
+\end{frame}
+
+\begin{frame}{Exemplo de Diagrama de Casos de Uso}
+
+\centering \includegraphics[keepaspectratio,width=.7\textwidth]{Diagrama_Casos_De_Uso_Controle_Estoque}
+
+\end{frame}
+
+\begin{frame}{Exemplo de Descrição de Caso de Uso}
+
+\textbf{Nome}: Cadastrar Produto
+
+\textbf{Descrição}: Este caso de uso permite o cadastro de produtos no sistema de controle de estoques. Diferentes atores (atendente e gerente) podem cadastrar produtos no sistema.\\[5mm]
+
+\textbf{Pré-Condições}: Possuir informações do produto a ser cadastrado.\\[5mm]
+
+\textbf{Pós-Condições}: Caso todas as informações estejam corretas, o novo produto é armazenado na base de dados do sistema. Caso contrário, o produto não é armazenado na base de dados.
+
+\end{frame}
+
+\begin{frame}{Exemplo de Descrição de Caso de Uso}
+\textbf{Fluxo normal}:
+
+\begin{enumerate}
+
+\item A qualquer momento antes de salvar o novo produto na base de dados do sistema, o Usuário (Atendente ou Gerente) pode cancelar o cadastro do produto;
+
+\item Usuário (Atendente ou Gerente) seleciona tipo de produto a ser cadastrado;
+
+\item Usuário (Atendente ou Gerente) preenche as informações do produto a ser cadastrado (código, descrição, quantidade, etc..);
+
+\item Usuário (Atendente ou Gerente) salva o produto na base de dados do sistema.
+
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Exemplo de Descrição de Casos de Uso}
+
+\textbf{Fluxos alternativos}:
+
+\vspace*{2mm}
+
+\textbf{Condição 2}: Usuário (Atendente ou Gerente) tenta cadastrar produto já existente na base de dados do sistema.
+
+\begin{enumerate}
+
+\item Ao tentar cadastrar o produto na base de dados do sistema, o Usuário (Atendente ou Gerente) recebe um alerta do sistema indicando que o produto a ser salvo já existe na base de dados;
+
+\item Após emitir o alerta para o Usuário (Atendente ou Gerente) o sistema indica os campos que devem ser únicos, ou seja, não podem pertencer a mais nenhum produto. O Usuário (Atendente ou Gerente) então decide o que fazer;
+
+\item Se o Usuário (Atendente ou Gerente) alterar as informações para cadastrar um novo produto, o produto é salvo na base de dados do sistema. Caso contrário, O Usuário (Atendente ou Gerente) cancela o cadastro.
+
+\end{enumerate}
+
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Exemplo de Descrição de Casos de Uso}
+
+\textbf{Fluxos alternativos}:
+
+\vspace*{5mm}
+
+\textbf{Condição 3}: ...
+
+\textbf{Condição 4}: ...
+
+\textbf{Condição 5}: ...
+
+\begin{alertblock}{\centering \textcolor{red}{Importante!}}
+A descrição de um caso de uso não deve ser muito extensa. Portanto, não é preciso especificar uma lista exaustiva de fluxos alternativos. Concentrem-se nos fluxos mais importantes.
+\end{alertblock}
+
+\end{frame}
+
+\begin{frame}{Exercício de Fixação}
+
+\begin{alertblock}{Exercício}
+Escreva a descrição do caso de uso \textbf{Remover Produto}.
+\end{alertblock}
+
+\end{frame}
+
+\begin{frame}{Inclusão de Casos de Uso}
+
+\begin{alertblock}{Inclusão (Include)}
+As vezes se faz necessária a utilização de um caso de uso dentro de outro, principalmente quando um determinado comportamento é comum a partes diferentes do sistema. Quando o comportamento de um caso de uso é parte obrigatória de outros casos de uso, utiliza-se a inclusão (<<include>>).
+
+\end{alertblock}
+
+\end{frame}
+
+\begin{frame}{Exemplo de Inclusão de Casos de Uso}
+
+\centering \includegraphics[keepaspectratio,width=.8\textwidth]{Include_Caso_de_Uso}
+
+\begin{alertblock}{Detalhes}
+No exemplo acima, o caso de uso \textbf{Consultar Produto} é incluído como parte obrigatória do comportamento do caso de uso \textbf{Alterar Produto}. O motivo é simples: é necessário consultar as informações de um produto antes de poder realizar qualquer alteração. Essa inclusão é realizada através de um ponto de inclusão (inclusion point), que especifica exatamente onde o comportamento do caso de uso incluído deve ser executado.
+\end{alertblock}
+
+\end{frame}
+
+\begin{frame}{Extensão de Casos de Uso}
+
+\begin{alertblock}{Extensão (Extends)}
+Diferente da inclusão que é obrigatória, a extensão (<<extend>>) de casos de uso permite a inclusão de um caso dentro do outro como parte opcional. 
+
+\end{alertblock}
+
+\end{frame}
+
+\begin{frame}{Exemplo de Extensão de Casos de Uso}
+
+\centering \includegraphics[keepaspectratio,width=.8\textwidth]{Extend_Caso_de_Uso}
+
+\begin{alertblock}{Detalhes}
+No exemplo acima, o caso de uso \textbf{Consultar Produto} é incluído como parte opcional do comportamento do caso de uso \textbf{Alterar Produto}. O motivo é simples: a consulta de um deté conerminado produto só é necessária caso o Usuário (Gerente) deseje ver mais detalhes do produto. O uso de extensão de casos de uso é indicado por pontos de extensão (extension points).
+\end{alertblock}
+
+\end{frame}
+
+\begin{frame}{Exemplo de Pontos de Extensão}
+
+\centering \includegraphics[keepaspectratio,width=.8\textwidth]{Extend_Caso_de_Uso-extension-point}
+
+\begin{alertblock}{Pontos de Extensão (Extension Points)}
+Os Pontos de extensão  indicam em que momento e condição a extensão de caso de uso deve ser executada. No exemplo acima, o caso de uso \textbf{Consultar Produto} é executado assim que a condição ver detalhes do produto é disparada. 
+\end{alertblock}
+
+\end{frame}
+
+\begin{frame}{Diferenças Entre <<include>> e <<extend>>}
+
+\begin{tabular}{m{7cm}|c|c}
+\hline\hline
+& \textbf{<<include>>} & \textbf{<<extend>>}\\ 
+\hline
+O caso de uso é opcional? & Não & Sim
+\\ \hline
+O caso de uso base completa sem o caso de uso que é incluído/estendido? & Não & Sim \\ 
+\hline
+A execução do caso de uso é condicionada? & Não & Sim \\
+\hline
+O caso de uso muda o comportamento do caso de uso base? & Não & Sim \\
+\hline\hline
+\end{tabular}
+
+\end{frame}
+
+\begin{frame}{Exercício}
+
+\begin{alertblock}{O Desafio da Petshop}
+Sua equipe de desenvolvimento foi contratada para desenvolver um sistema para gerir uma petshop. Durrante a fase de levantamento de requisitos, você ficou com a missão de especificar os casos de uso que descrevem o cadastro de clientes, o cadastro de animais associados aos seus clientes, a consulta de informações referentes a um dado animal (ex: ultima vacina realizada, ultima lavagem, última tosagem, etc), e um relatório dos animais que são atendidos pelo estabelecimento. Portanto, especifique um diagrama de casos de uso que complete a sua missão com sucesso :-D. 
+\end{alertblock}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{}
 
 \begin{frame}[plain,allowframebreaks,noframenumbering]{Bibliografia}
 
 \begin{thebibliography}{Pressman, 2001}
 
+\bibitem[BoochEtAl, 2007]{BoochEtAl-2007}
+
+\newblock{Booch G., Maksimchuk, R. A., Engle, M. W., Young, B. J., Conallen, J., and Houston, K. A. {\em ``Object-Oriented Analysis and Design With Applications"}. 3rd edition. Addison-Wesley, 2007.}
+
+\bibitem[OMG-UML, 2017]{OMG-UML-2017}
+
+\newblock{OMG. {\em ``OMG Unified Modeling Language (OMG UML)"}, version 2.5.1. 2017.}
+
 \bibitem[Pressman, 2001]{Pressman-2001}
 
-Pressman, R.
+\newblock{Pressman, R. {\em ``Software Engineering: A Practioner's Approach"}. 4th edition. McGraw-Hill, 2001.}
 
-\newblock{{\em ``Software Engineering: A Practioner's Approach"}. 4th edition. McGraw-Hill, 2001.}
+
 
 \end{thebibliography}
 

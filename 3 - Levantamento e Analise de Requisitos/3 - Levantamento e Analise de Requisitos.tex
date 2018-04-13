@@ -92,7 +92,7 @@ extendedchars=true}
 
 \begin{document}
 
-\title[Levantamento de Requisitos \hskip35mm \insertframenumber / \inserttotalframenumber  \hskip32mm \inserttitlegraphic]{Levantamento de Requisitos \\[4mm]
+\title[Levantamento e Análise de Requisitos \hskip30mm \insertframenumber / \inserttotalframenumber  \hskip27mm \inserttitlegraphic]{Levantamento e Análise de Requisitos \\[4mm]
 \includegraphics[keepaspectratio,width=.5\textwidth]{lego-ppr}}
 \author[@2018 Prof. Jeferson Souza, MSc (jefecomp) - All rights reserved.]{
 	\textcolor{blue}{Prof. Jeferson Souza, MSc.} \\[1mm] 
@@ -808,10 +808,138 @@ O caso de uso muda o comportamento do caso de uso base? & Não & Sim \\
 \begin{frame}{Exercício}
 
 \begin{alertblock}{O Desafio da Petshop}
-Sua equipe de desenvolvimento foi contratada para desenvolver um sistema para gerir uma petshop. Durrante a fase de levantamento de requisitos, você ficou com a missão de especificar os casos de uso que descrevem o cadastro de clientes, o cadastro de animais associados aos seus clientes, a consulta de informações referentes a um dado animal (ex: ultima vacina realizada, ultima lavagem, última tosagem, etc), e um relatório dos animais que são atendidos pelo estabelecimento. Portanto, especifique um diagrama de casos de uso que complete a sua missão com sucesso :-D. 
+Sua equipe de desenvolvimento foi contratada para desenvolver um sistema para gerir uma petshop. Durrante a fase de levantamento de requisitos, você ficou com a missão de especificar os casos de uso que descrevem o cadastro de clientes, o cadastro de animais associados aos seus clientes, a consulta de informações referentes a um dado animal (ex: última vacina realizada, última lavagem, última tosagem, etc), e um relatório dos animais que são atendidos pelo estabelecimento. Portanto, especifique um diagrama de casos de uso que complete a sua missão com sucesso :-D. 
 \end{alertblock}
 
 \end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Análise}
+
+\subsection{Análise}
+
+\begin{frame}[allowframebreaks=.7]{Análise de Requisitos}
+
+A análise de requisitos consiste em:
+
+\begin{itemize}
+\itemsep 5mm
+
+\item Verificar a consistência dos requisitos que foram levantados;
+
+\item Verificar se os requisitos levantados não são redundantes;
+
+\item Verificar se não faltam requisitos para suprir o que o cliente/usuário espera do sistema;
+
+\item Extrair/Especificar os requisitos funcionais e não funcionais do software a ser desenvolvido;
+
+\item Organizar os requisitos em categorias;
+
+\item Identificar o relacionamento entre os requisitos;
+
+\item Identificar a importância de cada um dos requisitos funcionais e não funcionais (Priorização).
+
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[allowframebreaks=.8]{Perguntas Importantes na Análise de Requisitos}
+
+Perguntas que devem ser feitas durante a análise:
+
+\begin{itemize}
+\itemsep 5mm
+
+\item Cada um dos requisitos levantados é consistente com o objetivo do software a ser desenvolvido?
+
+\item O requisito levantado é realmente necessário? Ou pode ser classificado como algo adicional/diferencial?
+
+\item Existe ambiguidade nos requisitos levantados?
+
+\item O escopo de todos os requisitos levantados está bem definido?
+
+\item Existem conflitos entre os requisitos levantados?
+
+\item Cada um dos requisitos levantados é tecnicamente viável, e portanto pode ser implementado?
+
+\item Cada um dos requisitos levantados pode ser testado após ser implementado?
+
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Especificação de Requisitos}
+
+\begin{alertblock}{Especificação de Requisitos}
+A especificação dos requisitos consiste na análise dos requisitos levantados para realizar uma tradução e classificação em requisitos funcionais e requisitos não funcionais do software a ser implementado.
+\end{alertblock}
+
+\end{frame}
+
+\begin{frame}{Requisitos Funcionais e Não-Funcionais}
+
+
+\begin{alertblock}{Requisitos Funcionais}
+Requisitos funcionais são requisitos que descrevem elementos que fazem parte da(s) funcionalidade(s) oferecida(s) pelo software.
+\end{alertblock}
+
+\begin{alertblock}{Requisitos Não-Funcionais}
+Requisitos não-funcionais são requisitos que descrevem elementos que não fazem parte da(s) funcionalidade(s) oferecida(s) pelo software, porém são importantes no suporte do oferecimento dessa(s) funcionalidade(s). 
+\end{alertblock}
+
+\end{frame}
+
+\begin{frame}{Definição de Nomenclatura}
+
+É importante definir uma nomenclatura que será utilizada na produção de um documento formal, que contenha a especificação dos requisitos funcionais e não funcionais do software a ser desenvolvido.
+
+\begin{alertblock}{Nomenclatura (Exemplo)}
+\begin{itemize}
+\itemsep 5mm
+
+\item \textbf{RF} - Para definir um requisito funcional. Exemplo: \textbf{RF01} - Tela de Cadastro de Produto;
+
+\item \textbf{RNF} - Para definir um requisito não-funcional. Exemplo: \textbf{RNF01} - O sistema deve produzir o relatório de lista de produtos em, no máximo, 3 segundos.
+
+\end{itemize}
+\end{alertblock}
+
+\end{frame}
+
+\begin{frame}{Exemplos de Requisitos Funcionais e Não-Funcionais}
+
+\only<1>{
+\begin{alertblock}{Exemplo de Requisito Funcional}
+{
+\footnotesize
+
+\textbf{RF01} - Tela de Cadastro de Produto;\\
+\textbf{Descrição}: A tela de cadastro de produto fornece uma interface gráfica que permite que um usuário do sistema cadastre um novo produto na base de dados. Para tal, a tela de cadastro de produto possui os seguintes elementos:\\
+
+\textbf{Código do produto}: O código do produto deve possuir denominação de texto simples ``Código do Produto", além de uma caixa de texto para informar o código do produto a ser cadastrado. A caixa de texto deve permitir a visualização de 10 caracteres. A caixa de texto deve permitir somente a entrada de códigos com o seguinte formato: \textbf{PRD-XXXXXXX}. O termo \textbf{XXXXX} tem um tamanho fixo de sete (7) caracteres, e pode ser composto por: (a) somente letras maiúsculas de A a Z; (b) somente números de zero (0) a nove (9); ou (c) uma combinação de letras maiúsculas de A a Z e números de zero (0) a nove (9). Em qualquer um dos casos (de \textbf{(a)} a \textbf{(c)}) letras e números podem se repetir. Exemplos de códigos válidos: \textbf{PRD-ABCDEFG}, \textbf{PRD-0001234}, \textbf{PRD-AZ4576D}.\\
+
+ E assim sucessivamente ... 
+}
+
+\end{alertblock}
+}
+
+\only<2>{
+
+\begin{alertblock}{Exemplo de Requisito Não-Funcional}
+{
+\footnotesize
+
+\textbf{RNF01} - O sistema deve produzir o relatório de lista de produtos em, no máximo, 3 segundos;\\
+\textbf{Descrição}: Após o usuário entrar na opção de menu (Relatórios -> Lista de Produtos) o sistema deverá realizar o processo de produção do relatório citado em, no máximo, 3 segundos. Em caso de falha na produção do relatório de Lista de Produtos, o sistema deve notificar o uuário com uma mensagem de erro, indicando o motivo pelo qual o relatório não pode ser produzido. A mensagem não deve conter elementos técnicos, e utilizar uma linguagem que esteja no domínio do usuário do sistema. Além disso, a notificação de erro ao usuário deve também ocorrer em, no máximo, 3 segundos.
+}
+
+\end{alertblock}
+}
+
+\end{frame}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
